@@ -1,6 +1,6 @@
 top 100 verb notes
 
-NB the following only apply to present tense verb conjugation
+NB the following only apply to present indicative tense verb conjugation
 
 1. ser							- to be									-DONE
 completely irreg
@@ -20,14 +20,90 @@ o:ue stem changer
 6. decir						- to say								-DONE
 e:i stem changer, plus digo (yo digo)
 
-7. ir							- to go									
+7. ir							- to go									-DONE
 irregular other than same conjugation as dar
 
-8. ver							- to see
+8. ver							- to see								-DONE
 regular other than veo (yo veo)
 
-9. dar							- to give
-irregular other than same conjugation as ir
+9. dar							- to give								-DONE
+regular except for yo doy
 
-10. saber						- to know (info)
+10. saber						- to know (info)						-DONE
 regular other than sé (yo sé)
+
+11. querer						-to want/love							-DONE
+irregular (but could be an e-i stem changer?)
+
+12. llegar						-to arrive								-DONE
+regular
+
+13. pasar						-to pass								-DONE
+regular
+
+deber							-to owe									-DONE
+regular
+
+15. poner						-to put									-DONE
+regular aside from yo pongo
+
+16. parecer						-to seem								-DONE
+regular aside from yo parezco
+
+17. quedar						-to remain								-DONE
+regular
+
+18. creer						-to believe								-DONE
+regular
+
+19. hablar						-to speak								-DONE
+regular
+
+20. llevar						-to carry/bring							-DONE
+regular
+
+21. dejar						-to leave/abandon						-DONE
+regular
+
+22. seguir						-to follow								-DONE
+e-i stem changer, irregular yo sigo
+
+23. encontrar					-to find								-DONE
+o-ue stem changer
+
+24. llamar						-to call								-DONE
+regular
+
+25. venir						-to come								-DONE
+e-ie stem changer, irregular yo vengo
+
+
+31. vivir						-to live								-DONE
+regular
+
+42. escribir					-to write								-DONE
+regular
+
+64. crear						-to create								-DONE
+regular
+
+65. abrir						-to open								-DONE
+regular
+
+
+
+
+??? cortar						-to cut									-DONE
+regular
+
+?? contestar					-to answer								-DONE
+regular
+
+??? comer 						-to eat									-DONE
+regular
+
+??? beber 						-to drink								-DONE
+regular
+
+??? vender 						-to drink								-DONE
+regular

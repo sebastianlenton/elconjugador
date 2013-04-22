@@ -1,6 +1,6 @@
 //El Conjugador
 //Sebastian Lenton, 21/04/2013
-//v0.15
+//v0.2
 
 /******************************
 dictionaries, endings, etc
@@ -11,7 +11,9 @@ verbInfIR = new Array( [ 'abrir', 'open' ],										//abrir is a regular verb, 
 					[ 'ir', 'go' ],
 					[ 'escribir', 'write' ],
 					[ 'vivir', 'live' ],
-					[ 'decir', 'say' ]
+					[ 'decir', 'say' ],
+					[ 'seguir', 'follow' ],
+					[ 'venir', 'come' ]
 );
 
 //spanish/english regular AR infinitives
@@ -19,7 +21,14 @@ verbInfAR = new Array( [ 'crear', 'create' ],
 					[ 'cortar', 'cut' ],
 					[ 'contestar', 'answer' ],
 					[ 'dar', 'give' ],
-					[ 'hablar', 'speak' ]
+					[ 'hablar', 'speak' ],
+					[ 'llegar', 'arrive' ],
+					[ 'pasar', 'pass' ],
+					[ 'quedar', 'remain' ],
+					[ 'llevar', 'bring' ],
+					[ 'dejar', 'leave' ],
+					[ 'encontrar', 'find' ],
+					[ 'llamar', 'call' ]
 );																					//re - what to do with ones which are slightly ambiguous, such as contestar which means "answer/respond/reply?
 					
 //spanish/english regular ER infinitives
@@ -28,7 +37,14 @@ verbInfER = new Array( [ 'ser', 'be' ],
 					[ 'beber', 'drink' ],
 					[ 'vender', 'sell' ],
 					[ 'tener', 'have' ],
-					[ 'poder', 'can' ]
+					[ 'poder', 'can' ],
+					[ 'ver', 'see' ],
+					[ 'saber', ' know'],
+					[ 'querer', 'want'],
+					[ 'deber', 'owe' ],
+					[ 'poner', 'put' ],
+					[ 'parecer', 'seem' ],
+					[ 'creer', 'believe' ]
 );
 
 //sp/eng pronouns
@@ -82,13 +98,44 @@ irregOverrides = new Array(
 							],
 							[ 'decir',
 								[ 'Yo', 'digo' ]
+							],
+							[ 'ir',
+								[ 'Yo', 'voy' ], [ 'T&uacute;', 'vas' ], [ '&Eacute;l', 'va' ], [ 'Nosotros', 'vamos' ], [ 'Ellos', 'van' ]
+							],
+							[ 'ver',
+								[ 'Yo', 'veo' ]
+							],
+							[ 'dar',
+								[ 'Yo', 'doy' ]
+							],
+							[ 'saber',
+								[ 'Yo', 's&eacute;' ]
+							],
+							[ 'querer',
+								[ 'Yo', 'quiero' ], [ 'T&uacute;', 'quieres' ], [ '&Eacute;l', 'quiere' ], [ 'Ellos', 'quieren' ]
+							],
+							[ 'poner',
+								[ 'Yo', 'pongo' ]
+							],
+							[ 'parecer',
+								[ 'Yo', 'parezco' ]
+							],
+							[ 'seguir',
+								[ 'Yo', 'sigo' ]
+							],
+							[ 'venir',
+								[ 'Yo', 'vengo' ]
 							]
+
 );
 
 stemChangers = new Array(
 	[ 'tener', 'e-ie' ],
-	[ 'tener', 'o-ue' ],
-	[ 'decir', 'e-i' ]
+	[ 'venir', 'e-ie' ],
+	[ 'poder', 'o-ue' ],
+	[ 'decir', 'e-i' ],
+	[ 'seguir', 'e-i' ],
+	[ 'encontrar', 'o-ue' ]
 );
 
 //verb object
@@ -108,7 +155,9 @@ Verb.prototype = {
 		this.stem = this.spanishInf.substring( 0, this.spanishInf.length - 2 );
 		
 		for( q = 0; q < stemChangers.length; q++ ) {	//check if on stem changers list
-			this.stemChangeType = stemChangers[ q ][ 1 ];
+			if( this.spanishInf == stemChangers[ q ][ 0 ] ) {
+				this.stemChangeType = stemChangers[ q ][ 1 ];
+			}
 		}
 	},
 	getEngInf: function() {
@@ -142,8 +191,6 @@ Verb.prototype = {
 				return false;
 		}
 		
-		//stem changers
-		//etc
 		conjugations = this.getIrregOverrides( conjugations );
 		this.conjugations = conjugations;
 	},
