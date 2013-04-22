@@ -89,7 +89,7 @@ infEndingsER = new Array( 	[ 'Yo', 'o' ],
 //irregular infinitive overrides
 irregOverrides = new Array( 	
 							[ 'ser',
-								[ 'Yo', 'soy' ], [ 'T&uacute;', 'eres' ], [ '&Eacute;l', 'es' ], [ 'Nosotros', 'somos' ], [ 'Ellos', 'son' ]
+								[ 'Yo', 'soy' ], [ 'T&uacute;', 'eres' ], [ '&Eacute;l', 'es' ], [ 'Nosotros', 'somos' ], [ 'Vosotros', 'sois' ], [ 'Ellos', 'son' ]
 							],
 							[ 'estar',
 								[ 'Yo', 'estoy' ], [ 'T&uacute;', 'est&aacute;s' ], [ '&Eacute;l', 'est&aacute;' ], [ 'Ellos', 'est&aacute;n' ]
@@ -104,7 +104,7 @@ irregOverrides = new Array(
 								[ 'Yo', 'digo' ]
 							],
 							[ 'ir',
-								[ 'Yo', 'voy' ], [ 'T&uacute;', 'vas' ], [ '&Eacute;l', 'va' ], [ 'Nosotros', 'vamos' ], [ 'Ellos', 'van' ]
+								[ 'Yo', 'voy' ], [ 'T&uacute;', 'vas' ], [ '&Eacute;l', 'va' ], [ 'Nosotros', 'vamos' ], [ 'Vosotros', 'va&iacute;s' ], [ 'Ellos', 'van' ]
 							],
 							[ 'ver',
 								[ 'Yo', 'veo' ]
@@ -237,6 +237,7 @@ Verb.prototype = {
 	displayOutput: function() {
 		var outputStr = '';
 		if( this.conjugations.length > 0 ) {
+			outputStr = '<h2>' + this.spanishInf + ' - to ' + this.englishInf + '</h2>';
 			for( i = 0; i < this.conjugations.length; i++ ) {
 				
 				outputStr += '<li>' + pronouns[i][0] + ' ' + this.conjugations[i] + '</li>';
