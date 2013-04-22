@@ -51,8 +51,9 @@ verbInfER = new Array( [ 'ser', 'be' ],
 pronouns = new Array( 	[ 'Yo', 'I' ],										
 							[ 'T&uacute;', 'You' ],
 							[ '&Eacute;l', 'He' ],
-							[ 'Nosotros', 'We' ],									//nosotras?
-							[ 'Ellos', 'They' ]										//ellas?
+							[ 'Nosotros', 'We' ],
+							[ 'Vosotros', 'We all' ],
+							[ 'Ellos', 'They' ]
 																					//usted, ustedes, vosotros etc?
 );
 
@@ -63,6 +64,7 @@ infEndingsIR = new Array( 	[ 'Yo', 'o' ],
 								[ 'T&uacute;', 'es' ],
 								[ '&Eacute;l', 'e' ],
 								[ 'Nosotros', 'imos' ],
+								[ 'Vosotros', '&iacute;s' ],
 								[ 'Ellos', 'en' ]
 );
 
@@ -71,6 +73,7 @@ infEndingsAR = new Array( 	[ 'Yo', 'o' ],
 								[ 'T&uacute;', 'as' ],
 								[ '&Eacute;l', 'a' ],
 								[ 'Nosotros', 'amos' ],
+								[ 'Vosotros', '&aacute;is' ],
 								[ 'Ellos', 'an' ]
 );
 
@@ -79,6 +82,7 @@ infEndingsER = new Array( 	[ 'Yo', 'o' ],
 								[ 'T&uacute;', 'es' ],
 								[ '&Eacute;l', 'e' ],
 								[ 'Nosotros', 'emos' ],
+								[ 'Vosotros', '&eacute;is' ],
 								[ 'Ellos', 'en' ]
 );
 
@@ -234,6 +238,7 @@ Verb.prototype = {
 		var outputStr = '';
 		if( this.conjugations.length > 0 ) {
 			for( i = 0; i < this.conjugations.length; i++ ) {
+				
 				outputStr += '<li>' + pronouns[i][0] + ' ' + this.conjugations[i] + '</li>';
 			}
 			return '<ul>' + outputStr + '</ul>';
@@ -242,7 +247,8 @@ Verb.prototype = {
 	}
 }
 
-//helpers for operation														//could do with better org here, better naming, etc
+//helpers for operation, front end, etc
+//this section really sucks
 function searchDictByKey( dict, key ) {
 	for(  i = 0; i < dict.length; i++ ) {
 		if( key == dict[ i ][ 0 ] ) {
