@@ -15,7 +15,8 @@ verbInfIR = new Array( [ 'abrir', 'open' ],										//abrir is a regular verb, 
 					[ 'seguir', 'follow' ],
 					[ 'venir', 'come' ],
 					[ 'salir', 'leave' ],
-					[ 'sentir', 'feel' ]
+					[ 'sentir', 'feel' ],
+					[ 'existir', 'exist' ]
 );
 
 //spanish/english regular AR infinitives
@@ -36,7 +37,11 @@ verbInfAR = new Array( [ 'crear', 'create' ],
 					[ 'tratar', 'treat' ],
 					[ 'mirar', 'watch' ],
 					[ 'contar', 'count' ],
-					[ 'empezar', 'start' ]
+					[ 'empezar', 'start' ],
+					[ 'esperar', 'hope' ],
+					[ 'buscar', 'search' ],
+					[ 'entrar', 'enter' ],
+					[ 'trabajar', 'work' ]
 );																					//re - what to do with ones which are slightly ambiguous, such as contestar which means "answer/respond/reply?
 					
 //spanish/english regular ER infinitives
@@ -54,7 +59,8 @@ verbInfER = new Array( [ 'ser', 'be' ],
 					[ 'parecer', 'seem' ],
 					[ 'creer', 'believe' ],
 					[ 'volver', 'return' ],
-					[ 'conocer', 'know' ]
+					[ 'conocer', 'know' ],
+					[ 'perder', 'lose' ]
 );
 
 //sp/eng pronouns
@@ -160,7 +166,8 @@ stemChangers = new Array(				//this could be improved as it shouldn't have to st
 	[ 'volver', 'o-ue' ],
 	[ 'contar', 'o-ue' ],
 	[ 'sentir', 'e-ie' ],
-	[ 'empezar', 'e-ie' ]
+	[ 'empezar', 'e-ie' ],
+	[ 'perder', 'e-ie' ]
 );
 
 //verb object
@@ -223,7 +230,7 @@ Verb.prototype = {
 		if( pronoun != 'Nosotros' && pronoun != 'Vosotros' ) {		//when Vosotros is actually introduced, this might fail. Untested.
 			if( this.stemChangeType ) {
 				if( this.stemChangeType == 'e-ie' ) {
-					if( this.stemChangeType.indexOf( 'e' ) != 0 ) {
+					if( stem.indexOf( 'e' ) != 0 ) {
 						stem = stem.replace( 'e', 'ie' );
 					} else {
 						//cut the string down as it begins with e

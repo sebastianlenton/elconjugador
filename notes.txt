@@ -1,26 +1,26 @@
-top 100 verb notes																			*tested w/vosotros
+top 100 verb notes														
 
 NB the following only apply to present indicative tense verb conjugation
 
-1. ser							- to be						-DONE*
+1. ser							- to be						-DONE
 completely irreg
 
-2. estar						- to be						-DONE*
+2. estar						- to be						-DONE
 nearly completely irreg (other than nosotros/vosotros)
 
-3. tener						- to have					-DONE*
+3. tener						- to have					-DONE
 e:ie stem changer other than yo tengo
 
-4. hacer						- to do						-DONE*
+4. hacer						- to do						-DONE
 regular aside from yo (hago)
 
-5. poder						- to be able to				-DONE*
+5. poder						- to be able to				-DONE
 o:ue stem changer
 
-6. decir						- to say					-DONE*
+6. decir						- to say					-DONE
 e:i stem changer, plus digo (yo digo)
 
-7. ir							- to go						-DONE*
+7. ir							- to go						-DONE
 irregular other than same conjugation as dar
 
 8. ver							- to see					-DONE
@@ -32,7 +32,7 @@ regular except for yo doy
 10. saber						- to know (info)			-DONE
 regular other than sé (yo sé)
 
-11. querer						-to want/love				-DONE*
+11. querer						-to want/love				-DONE
 irregular (but could be an e-i stem changer?)
 
 12. llegar						-to arrive					-DONE
@@ -110,9 +110,32 @@ o-ue stem changer
 36. empezar						-to start					-DONE
 e-ie stem changer - had to mod the code as e is the first letter!
 
+37. esperar						-to hope					-DONE
+regular
+
+38. buscar						-to search/look for			-DONE
+regular
+
+39. existir						-to exist					-assumed, as regular
+regular
+
+40. entrar						-to enter, go in			-DONE
+regular
+
+41. trabajar					-to work					-assumed
+regular
 
 42. escribir					-to write					-DONE
 regular
+
+43. perder						-to lose					-
+e-ie stem changer
+
+XX. v						-							-
+n
+
+XX. v						-							-
+n
 
 64. crear						-to create					-DONE
 regular
