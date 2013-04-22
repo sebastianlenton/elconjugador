@@ -1,24 +1,26 @@
 top 100 verb notes
 
-1. ser							- to be
+NB the following only apply to present tense verb conjugation
+
+1. ser							- to be									-DONE
 completely irreg
 
-2. estar						- to be
+2. estar						- to be									-DONE
 nearly completely irreg (other than nosotros/vosotros)
 
-3. tener						- to have
-nearly completely irreg (other than nosotros/vosotros)
+3. tener						- to have								-DONE
+e:ie stem changer other than yo tengo
 
-4. hacer						- to do
+4. hacer						- to do									-DONE
 regular aside from yo (hago)
 
-5. poder						- to be able to
+5. poder						- to be able to							-DONE
 o:ue stem changer
 
-6. decir						- to say
+6. decir						- to say								-DONE
 e:i stem changer, plus digo (yo digo)
 
-7. ir							- to go
+7. ir							- to go									
 irregular other than same conjugation as dar
 
 8. ver							- to see

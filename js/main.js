@@ -10,7 +10,8 @@ dictionaries, endings, etc
 verbInfIR = new Array( [ 'abrir', 'open' ],										//abrir is a regular verb, except for an irregular past participle, abierto
 					[ 'ir', 'go' ],
 					[ 'escribir', 'write' ],
-					[ 'vivir', 'live' ]
+					[ 'vivir', 'live' ],
+					[ 'decir', 'say' ]
 );
 
 //spanish/english regular AR infinitives
@@ -25,7 +26,9 @@ verbInfAR = new Array( [ 'crear', 'create' ],
 verbInfER = new Array( [ 'ser', 'be' ],
 					[ 'comer', 'eat' ],
 					[ 'beber', 'drink' ],
-					[ 'vender', 'sell' ]
+					[ 'vender', 'sell' ],
+					[ 'tener', 'have' ],
+					[ 'poder', 'can' ]
 );
 
 //sp/eng pronouns
@@ -66,15 +69,26 @@ infEndingsER = new Array( 	[ 'Yo', 'o' ],
 //irregular infinitive overrides
 irregOverrides = new Array( 	
 							[ 'ser',
-								[ 'Yo', 'soy' ], [ 'T&uacute;', 'eres' ], [ '&Eacute;l', 'es' ], [ 'Nosotros', 'somos' ], [ 'ellos', 'son' ]
+								[ 'Yo', 'soy' ], [ 'T&uacute;', 'eres' ], [ '&Eacute;l', 'es' ], [ 'Nosotros', 'somos' ], [ 'Ellos', 'son' ]
 							],
 							[ 'estar',
-								[ 'Yo', 'estoy' ], [ 'T&uacute;', 'est&aacute;s' ], [ '&Eacute;l', 'est&aacute;' ], [ 'ellos', 'est&aacute;n' ]
+								[ 'Yo', 'estoy' ], [ 'T&uacute;', 'est&aacute;s' ], [ '&Eacute;l', 'est&aacute;' ], [ 'Ellos', 'est&aacute;n' ]
 							],
-							[
-								'hacer',
+							[ 'hacer',
 								[ 'Yo', 'hago' ]
+							],
+							[ 'tener',
+								[ 'Yo', 'tengo' ]
+							],
+							[ 'decir',
+								[ 'Yo', 'digo' ]
 							]
+);
+
+stemChangers = new Array(
+	[ 'tener', 'e-ie' ],
+	[ 'tener', 'o-ue' ],
+	[ 'decir', 'e-i' ]
 );
 
 //verb object
@@ -83,6 +97,7 @@ function Verb( spanishInf ) {
 	this.englishInf = false;
 	this.ending = false,
 	this.stem = false,
+	this.stemChangeType = false,
 	this.conjugations = false
 }
 
@@ -91,6 +106,10 @@ Verb.prototype = {
 	getStemAndEnding: function() {
 		this.ending = this.spanishInf.substring( this.spanishInf.length - 2 );
 		this.stem = this.spanishInf.substring( 0, this.spanishInf.length - 2 );
+		
+		for( q = 0; q < stemChangers.length; q++ ) {	//check if on stem changers list
+			this.stemChangeType = stemChangers[ q ][ 1 ];
+		}
 	},
 	getEngInf: function() {
 		switch( this.ending ) {
@@ -125,37 +144,42 @@ Verb.prototype = {
 		
 		//stem changers
 		//etc
-		//irreg overrides
-		this.getIrregOverrides( conjugations );
+		conjugations = this.getIrregOverrides( conjugations );
 		this.conjugations = conjugations;
 	},
-	getIrregOverrides: function( conjugations ) {								//this does not work
-		console.log( 'gettting overrides' );
-		for( i = 0; i < irregOverrides.length; i++ ) {
-//			console.log( irregOverrides );
-			if( this.spanishInf == irregOverrides[ i ][ 0 ] ) {
-				for( j = 0; j < pronouns.length; j++ ) {
-					for( k = 1; k < irregOverrides[ i ][ 0 ].length; k++ ) {
-						if( irregOverrides[ i ][ k ][ 1 ] == pronouns[ j ][ 0 ] ) {
-							
-						
-							console.log( 'irreg replaced' + irregOverrides[ i ][ k ][ 1 ] );
-							conjugations[ j ] = irregOverrides[ i ][ k ][ 1 ];
-						}
-					}
-					//console.log( irregOverrides[ i ][ j ][1] );
+	stemChange: function( stem, pronoun ) {
+		if( pronoun != 'Nosotros' && pronoun != 'Vosotros' ) {		//when Vosotros is actually introduced, this might fail. Untested.
+			if( this.stemChangeType ) {
+				if( this.stemChangeType == 'e-ie' ) {
+					stem = stem.replace( 'e', 'ie' );
+				} else if( this.stemChangeType == 'e-i' ) {
+					stem = stem.replace( 'e', 'i' );
+				} else if( this.stemChangeType == 'o-ue' ) {
+					stem = stem.replace( 'o', 'ue' );
 				}
-//				console.log( irregOverrides[ i ][0].length );
-//				console.log( irregOverrides[ i ][1][0] );
-//				conjugations[ i ] 
 			}
 		}
-		this.conjugations = conjugations;
+		return stem;
+	},
+	getIrregOverrides: function( conjugations ) {
+		for( i = 0; i < irregOverrides.length; i++ ) {
+			if( this.spanishInf == irregOverrides[ i ][ 0 ] ) {
+				for( k = 1; k < irregOverrides[ i ].length; k++ ) {
+					for( j = 0; j < pronouns.length; j++ ) {
+						if( pronouns[ j ][ 0 ] == irregOverrides[ i ][ k ][ 0 ] ) {
+							conjugations[ j ] = irregOverrides[ i ][ k ][ 1 ];
+						}
+					}	
+				}
+				break;
+			}
+		}
+		return conjugations;
 	},
 	conjugateStandard: function( rules ) {
 		var output = [];
 		for( i = 0; i < rules.length; i++ ) {
-			output.push( this.stem + rules[ i ][ 1 ] );
+			output.push( this.stemChange( this.stem, rules[ i ][ 0 ] ) + rules[ i ][ 1 ] );
 		}
 		return output;
 	},
