@@ -2,108 +2,136 @@ top 100 verb notes																			*tested w/vosotros
 
 NB the following only apply to present indicative tense verb conjugation
 
-1. ser							- to be									-DONE*
+1. ser							- to be						-DONE*
 completely irreg
 
-2. estar						- to be									-DONE*
+2. estar						- to be						-DONE*
 nearly completely irreg (other than nosotros/vosotros)
 
-3. tener						- to have								-DONE*
+3. tener						- to have					-DONE*
 e:ie stem changer other than yo tengo
 
-4. hacer						- to do									-DONE*
+4. hacer						- to do						-DONE*
 regular aside from yo (hago)
 
-5. poder						- to be able to							-DONE*
+5. poder						- to be able to				-DONE*
 o:ue stem changer
 
-6. decir						- to say								-DONE*
+6. decir						- to say					-DONE*
 e:i stem changer, plus digo (yo digo)
 
-7. ir							- to go									-DONE*
+7. ir							- to go						-DONE*
 irregular other than same conjugation as dar
 
-8. ver							- to see								-DONE
+8. ver							- to see					-DONE
 regular other than veo (yo veo)
 
-9. dar							- to give								-DONE
+9. dar							- to give					-DONE
 regular except for yo doy
 
-10. saber						- to know (info)						-DONE
+10. saber						- to know (info)			-DONE
 regular other than sé (yo sé)
 
-11. querer						-to want/love							-DONE*
+11. querer						-to want/love				-DONE*
 irregular (but could be an e-i stem changer?)
 
-12. llegar						-to arrive								-DONE
+12. llegar						-to arrive					-DONE
 regular
 
-13. pasar						-to pass								-DONE
+13. pasar						-to pass					-DONE
 regular
 
-deber							-to owe									-DONE
+deber							-to owe						-DONE
 regular
 
-15. poner						-to put									-DONE
+15. poner						-to put						-DONE
 regular aside from yo pongo
 
-16. parecer						-to seem								-DONE
+16. parecer						-to seem					-DONE
 regular aside from yo parezco
 
-17. quedar						-to remain								-DONE
+17. quedar						-to remain					-DONE
 regular
 
-18. creer						-to believe								-DONE
+18. creer						-to believe					-DONE
 regular
 
-19. hablar						-to speak								-DONE
+19. hablar						-to speak					-DONE
 regular
 
-20. llevar						-to carry/bring							-DONE
+20. llevar						-to carry/bring				-DONE
 regular
 
-21. dejar						-to leave/abandon						-DONE
+21. dejar						-to leave/abandon			-DONE
 regular
 
-22. seguir						-to follow								-DONE
+22. seguir						-to follow					-DONE
 e-i stem changer, irregular yo sigo
 
-23. encontrar					-to find								-DONE
+23. encontrar					-to find					-DONE
 o-ue stem changer
 
-24. llamar						-to call								-DONE
+24. llamar						-to call					-DONE
 regular
 
-25. venir						-to come								-DONE
+25. venir						-to come					-DONE
 e-ie stem changer, irregular yo vengo
 
+26. pensar						-to think					-DONE
+e-ie stem changer
 
-31. vivir						-to live								-DONE
+27. salir						-to leave					-DONE
+irregular - yo salgo
+
+28. volver						-to return					-DONE
+o-ue stem changer.
+
+29. tomar						-to take					-DONE
 regular
 
-42. escribir					-to write								-DONE
-regular
+30. conocer						-to know					-DONE
+regular other than yo conozco
 
-64. crear						-to create								-DONE
-regular
-
-65. abrir						-to open								-DONE
+31. vivir						-to live					-DONE
 regular
 
 
 
 
-??? cortar						-to cut									-DONE
+
+42. escribir					-to write					-DONE
 regular
 
-?? contestar					-to answer								-DONE
+64. crear						-to create					-DONE
 regular
 
-??? comer 						-to eat									-DONE
+65. abrir						-to open					-DONE
 regular
 
-??? beber 						-to drink								-DONE
+
+
+
+??? cortar						-to cut						-DONE
 regular
 
-??? vender 						-to drink								-DONE
+?? contestar					-to answer					-DONE
 regular
+
+??? comer 						-to eat						-DONE
+regular
+
+??? beber 						-to drink					-DONE
+regular
+
+??? vender 						-to drink					-DONE
+regular
+
+
+
+
+
+
+
+
+XX. v						-							-
+n

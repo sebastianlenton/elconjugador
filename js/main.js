@@ -13,7 +13,8 @@ verbInfIR = new Array( [ 'abrir', 'open' ],										//abrir is a regular verb, 
 					[ 'vivir', 'live' ],
 					[ 'decir', 'say' ],
 					[ 'seguir', 'follow' ],
-					[ 'venir', 'come' ]
+					[ 'venir', 'come' ],
+					[ 'salir', 'leave' ]
 );
 
 //spanish/english regular AR infinitives
@@ -28,7 +29,9 @@ verbInfAR = new Array( [ 'crear', 'create' ],
 					[ 'llevar', 'bring' ],
 					[ 'dejar', 'leave' ],
 					[ 'encontrar', 'find' ],
-					[ 'llamar', 'call' ]
+					[ 'llamar', 'call' ],
+					[ 'pensar', 'think' ],
+					[ 'tomar', 'take' ]
 );																					//re - what to do with ones which are slightly ambiguous, such as contestar which means "answer/respond/reply?
 					
 //spanish/english regular ER infinitives
@@ -44,7 +47,9 @@ verbInfER = new Array( [ 'ser', 'be' ],
 					[ 'deber', 'owe' ],
 					[ 'poner', 'put' ],
 					[ 'parecer', 'seem' ],
-					[ 'creer', 'believe' ]
+					[ 'creer', 'believe' ],
+					[ 'volver', 'return' ],
+					[ 'conocer', 'know' ]
 );
 
 //sp/eng pronouns
@@ -125,21 +130,29 @@ irregOverrides = new Array(
 								[ 'Yo', 'parezco' ]
 							],
 							[ 'seguir',
-								[ 'Yo', 'sigo' ]
+								[ 'Yo', 'sigo' ]					//some of these run to a pattern
 							],
 							[ 'venir',
 								[ 'Yo', 'vengo' ]
+							],
+							[ 'salir',
+								[ 'Yo', 'salgo' ]
+							],
+							[ 'conocer', 
+								[ 'Yo', 'conozco' ]
 							]
 
 );
 
-stemChangers = new Array(
+stemChangers = new Array(				//this could be improved as it shouldn't have to store the stem change with the verb. But, if structured like irregular overrides, it might need ridiculous for loops and things to access
 	[ 'tener', 'e-ie' ],
 	[ 'venir', 'e-ie' ],
+	[ 'pensar', 'e-ie' ],
 	[ 'poder', 'o-ue' ],
 	[ 'decir', 'e-i' ],
 	[ 'seguir', 'e-i' ],
-	[ 'encontrar', 'o-ue' ]
+	[ 'encontrar', 'o-ue' ],
+	[ 'volver', 'o-ue' ]
 );
 
 //verb object
