@@ -14,7 +14,8 @@ verbInfIR = new Array( [ 'abrir', 'open' ],										//abrir is a regular verb, 
 					[ 'decir', 'say' ],
 					[ 'seguir', 'follow' ],
 					[ 'venir', 'come' ],
-					[ 'salir', 'leave' ]
+					[ 'salir', 'leave' ],
+					[ 'sentir', 'feel' ]
 );
 
 //spanish/english regular AR infinitives
@@ -31,7 +32,11 @@ verbInfAR = new Array( [ 'crear', 'create' ],
 					[ 'encontrar', 'find' ],
 					[ 'llamar', 'call' ],
 					[ 'pensar', 'think' ],
-					[ 'tomar', 'take' ]
+					[ 'tomar', 'take' ],
+					[ 'tratar', 'treat' ],
+					[ 'mirar', 'watch' ],
+					[ 'contar', 'count' ],
+					[ 'empezar', 'start' ]
 );																					//re - what to do with ones which are slightly ambiguous, such as contestar which means "answer/respond/reply?
 					
 //spanish/english regular ER infinitives
@@ -152,7 +157,10 @@ stemChangers = new Array(				//this could be improved as it shouldn't have to st
 	[ 'decir', 'e-i' ],
 	[ 'seguir', 'e-i' ],
 	[ 'encontrar', 'o-ue' ],
-	[ 'volver', 'o-ue' ]
+	[ 'volver', 'o-ue' ],
+	[ 'contar', 'o-ue' ],
+	[ 'sentir', 'e-ie' ],
+	[ 'empezar', 'e-ie' ]
 );
 
 //verb object
@@ -211,11 +219,18 @@ Verb.prototype = {
 		conjugations = this.getIrregOverrides( conjugations );
 		this.conjugations = conjugations;
 	},
-	stemChange: function( stem, pronoun ) {
+	stemChange: function( stem, pronoun ) {							//I think I could avoid doing this so many times
 		if( pronoun != 'Nosotros' && pronoun != 'Vosotros' ) {		//when Vosotros is actually introduced, this might fail. Untested.
 			if( this.stemChangeType ) {
 				if( this.stemChangeType == 'e-ie' ) {
-					stem = stem.replace( 'e', 'ie' );
+					if( this.stemChangeType.indexOf( 'e' ) != 0 ) {
+						stem = stem.replace( 'e', 'ie' );
+					} else {
+						//cut the string down as it begins with e
+						var cutDownStem = stem.substring( this.spanishInf.length - ( this.spanishInf.length - 1 ) );
+						cutDownStem = cutDownStem.replace( 'e', 'ie' );
+						stem = 'e' + cutDownStem;
+					}
 				} else if( this.stemChangeType == 'e-i' ) {
 					stem = stem.replace( 'e', 'i' );
 				} else if( this.stemChangeType == 'o-ue' ) {
