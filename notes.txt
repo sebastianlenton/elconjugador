@@ -152,6 +152,18 @@ o-ue stem changer
 50. terminar					-to finish					-DONE
 regular
 
+51. permitir					-to permit, allow			-DONE
+regular
+
+52. aparecer					-to appear					-DONE
+irregular yo aparezco
+
+53. conseguir					-to get						-DONE
+
+
+
+e-i stem changer. irregular yo consigo
+
 64. crear						-to create					-DONE
 regular
 

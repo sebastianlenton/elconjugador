@@ -30,7 +30,9 @@ verbInfIR = new Array( [ 'abrir', 'open' ],
 					[ 'producir', 'produce' ],
 					[ 'ocurrir', 'occur' ],
 					[ 'pedir', 'request' ],
-					[ 'recibir', 'receive' ]
+					[ 'recibir', 'receive' ],
+					[ 'permitir', 'permit' ],
+					[ 'conseguir', 'get' ]
 );
 
 //spanish/english regular AR infinitives
@@ -78,7 +80,8 @@ verbInfER = new Array( [ 'ser', 'be' ],
 					[ 'volver', 'return' ],
 					[ 'conocer', 'know' ],
 					[ 'perder', 'lose' ],
-					[ 'entender', 'understand' ]
+					[ 'entender', 'understand' ],
+					[ 'aparecer', 'appear' ]
 );
 
 //regular spanish infinitive endings - one for each group
@@ -154,14 +157,20 @@ irregOverrides = new Array(
 							[ 'venir',
 								[ 'Yo', 'vengo' ]
 							],
+							[ 'conseguir', 
+								[ 'Yo', 'consigo' ]
+							],
 							[ 'salir',
 								[ 'Yo', 'salgo' ]
 							],
-							[ 'conocer', 
+							[ 'conocer', 						//pattern with these too
 								[ 'Yo', 'conozco' ]
 							],
 							[ 'producir', 
 								[ 'Yo', 'produzco' ]
+							],
+							[ 'aparecer', 
+								[ 'Yo', 'aparezco' ]
 							]
 
 );
@@ -170,13 +179,12 @@ stemChangers = new Array(				//this could be improved as it shouldn't have to st
 	[ 'decir', 'e-i' ],
 	[ 'seguir', 'e-i' ],
 	[ 'pedir', 'e-i' ],
-	
+	[ 'conseguir', 'e-i'],
 	[ 'poder', 'o-ue' ],
 	[ 'encontrar', 'o-ue' ],
 	[ 'volver', 'o-ue' ],
 	[ 'contar', 'o-ue' ],
 	[ 'recordar', 'o-ue' ],
-	
 	[ 'sentir', 'e-ie' ],
 	[ 'empezar', 'e-ie' ],
 	[ 'perder', 'e-ie' ],
