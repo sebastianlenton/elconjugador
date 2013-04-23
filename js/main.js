@@ -3,18 +3,8 @@
 //v0.2
 
 /******************************
-dictionaries, endings, etc
+dictionaries of various things
 ******************************/
-
-//sp/eng pronouns
-pronouns = new Array( 	[ 'Yo', 'I' ],										
-							[ 'T&uacute;', 'You' ],
-							[ '&Eacute;l', 'He' ],
-							[ 'Nosotros', 'We' ],
-							[ 'Vosotros', 'We all' ],
-							[ 'Ellos', 'They' ]
-																					//some skipped as dupes of others
-);
 
 //spanish/english regular IR infinitives
 verbInfIR = new Array( [ 'abrir', 'open' ],
@@ -32,7 +22,8 @@ verbInfIR = new Array( [ 'abrir', 'open' ],
 					[ 'pedir', 'request' ],
 					[ 'recibir', 'receive' ],
 					[ 'permitir', 'permit' ],
-					[ 'conseguir', 'get' ]
+					[ 'conseguir', 'get' ],
+					[ 'servir', 'serve' ]
 );
 
 //spanish/english regular AR infinitives
@@ -60,7 +51,13 @@ verbInfAR = new Array( [ 'crear', 'create' ],
 					[ 'entrar', 'enter' ],
 					[ 'trabajar', 'work' ],
 					[ 'recordar', 'remember' ],
-					[ 'terminar', 'finish' ]
+					[ 'terminar', 'finish' ],
+					[ 'comenzar', 'begin' ],
+					[ 'sacar', 'take out' ],
+					[ 'necesitar', 'need' ],
+					[ 'resultar', 'turn out' ],
+					[ 'cambiar', 'change' ],
+					[ 'presentar', 'present' ]
 );																					//re - what to do with ones which are slightly ambiguous, such as contestar which means "answer/respond/reply?
 					
 //spanish/english regular ER infinitives
@@ -81,7 +78,10 @@ verbInfER = new Array( [ 'ser', 'be' ],
 					[ 'conocer', 'know' ],
 					[ 'perder', 'lose' ],
 					[ 'entender', 'understand' ],
-					[ 'aparecer', 'appear' ]
+					[ 'aparecer', 'appear' ],
+					[ 'mantener', 'maintain' ],
+					[ 'leer', 'read' ],
+					[ 'caer', 'fall' ]
 );
 
 //regular spanish infinitive endings - one for each group
@@ -111,6 +111,15 @@ infEndingsER = new Array( 	[ 'Yo', 'o' ],
 								[ 'Nosotros', 'emos' ],
 								[ 'Vosotros', '&eacute;is' ],
 								[ 'Ellos', 'en' ]
+);
+
+//sp/eng pronouns
+pronouns = new Array( 	[ 'Yo', 'I' ],										
+							[ 'T&uacute;', 'You' ],
+							[ '&Eacute;l', 'He' ],
+							[ 'Nosotros', 'We' ],
+							[ 'Vosotros', 'We all' ],
+							[ 'Ellos', 'They' ]																					//some skipped as dupes of others
 );
 
 //irregular infinitive overrides
@@ -171,6 +180,12 @@ irregOverrides = new Array(
 							],
 							[ 'aparecer', 
 								[ 'Yo', 'aparezco' ]
+							],
+							[ 'mantener',
+								[ 'Yo', 'mantengo' ]
+							],
+							[ 'caer',
+								[ 'Yo', 'caigo' ]
 							]
 
 );
@@ -180,18 +195,21 @@ stemChangers = new Array(				//this could be improved as it shouldn't have to st
 	[ 'seguir', 'e-i' ],
 	[ 'pedir', 'e-i' ],
 	[ 'conseguir', 'e-i'],
+	[ 'servir', 'e-i' ],
 	[ 'poder', 'o-ue' ],
 	[ 'encontrar', 'o-ue' ],
 	[ 'volver', 'o-ue' ],
 	[ 'contar', 'o-ue' ],
 	[ 'recordar', 'o-ue' ],
 	[ 'sentir', 'e-ie' ],
+	[ 'comenzar', 'e-ie' ],
 	[ 'empezar', 'e-ie' ],
 	[ 'perder', 'e-ie' ],
 	[ 'tener', 'e-ie' ],
 	[ 'venir', 'e-ie' ],
 	[ 'pensar', 'e-ie' ],
-	[ 'entender', 'e-ie' ]
+	[ 'entender', 'e-ie' ],
+	[ 'mantener', 'e-ie' ]
 	
 );
 

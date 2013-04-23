@@ -159,10 +159,37 @@ regular
 irregular yo aparezco
 
 53. conseguir					-to get						-DONE
-
-
-
 e-i stem changer. irregular yo consigo
+
+54. comenzar					-to start					-DONE
+e-ie stem changer
+
+55. servir						-to serve					-DONE
+e-i stem changer
+
+56. sacar						-to take out				-DONE
+regular
+
+57. necesitar					-to need					-DONE
+regular
+
+58. mantener					-to maintain				-DONE
+e-ie stem changer, irregular yo mantengo
+
+59. resultar					-to turn out				-DONE
+regular
+
+60. leer						-to read					-DONE
+regular
+
+61. caer						-to fall					-DONE
+irregular yo caigo
+
+62. cambiar						-to change					-DONE
+regular
+
+63. presentar					-to present					-DONE
+regular
 
 64. crear						-to create					-DONE
 regular
