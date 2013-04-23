@@ -28,7 +28,9 @@ verbInfIR = new Array( [ 'abrir', 'open' ],
 					[ 'sentir', 'feel' ],
 					[ 'existir', 'exist' ],
 					[ 'producir', 'produce' ],
-					[ 'ocurrir', 'occur' ]
+					[ 'ocurrir', 'occur' ],
+					[ 'pedir', 'request' ],
+					[ 'recibir', 'receive' ]
 );
 
 //spanish/english regular AR infinitives
@@ -54,7 +56,9 @@ verbInfAR = new Array( [ 'crear', 'create' ],
 					[ 'esperar', 'hope' ],
 					[ 'buscar', 'search' ],
 					[ 'entrar', 'enter' ],
-					[ 'trabajar', 'work' ]
+					[ 'trabajar', 'work' ],
+					[ 'recordar', 'remember' ],
+					[ 'terminar', 'finish' ]
 );																					//re - what to do with ones which are slightly ambiguous, such as contestar which means "answer/respond/reply?
 					
 //spanish/english regular ER infinitives
@@ -73,7 +77,8 @@ verbInfER = new Array( [ 'ser', 'be' ],
 					[ 'creer', 'believe' ],
 					[ 'volver', 'return' ],
 					[ 'conocer', 'know' ],
-					[ 'perder', 'lose' ]
+					[ 'perder', 'lose' ],
+					[ 'entender', 'understand' ]
 );
 
 //regular spanish infinitive endings - one for each group
@@ -162,18 +167,24 @@ irregOverrides = new Array(
 );
 
 stemChangers = new Array(				//this could be improved as it shouldn't have to store the stem change with the verb. But, if structured like irregular overrides, it might need ridiculous for loops and things to access
-	[ 'tener', 'e-ie' ],
-	[ 'venir', 'e-ie' ],
-	[ 'pensar', 'e-ie' ],
-	[ 'poder', 'o-ue' ],
 	[ 'decir', 'e-i' ],
 	[ 'seguir', 'e-i' ],
+	[ 'pedir', 'e-i' ],
+	
+	[ 'poder', 'o-ue' ],
 	[ 'encontrar', 'o-ue' ],
 	[ 'volver', 'o-ue' ],
 	[ 'contar', 'o-ue' ],
+	[ 'recordar', 'o-ue' ],
+	
 	[ 'sentir', 'e-ie' ],
 	[ 'empezar', 'e-ie' ],
-	[ 'perder', 'e-ie' ]
+	[ 'perder', 'e-ie' ],
+	[ 'tener', 'e-ie' ],
+	[ 'venir', 'e-ie' ],
+	[ 'pensar', 'e-ie' ],
+	[ 'entender', 'e-ie' ]
+	
 );
 
 //verb object

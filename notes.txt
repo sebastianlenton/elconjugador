@@ -137,20 +137,20 @@ irregular yo produzco - like conocer
 45. ocurrir						-to occur/happen			-DONE
 regular
 
-46. v						-							-
-n
+46. entender					-to understand				-DONE
+e-ie stem changer
 
-47. v						-							-
-n
+47. pedir						-to ask/request				-DONE
+e-i stem changer
 
-48. v						-							-
-n
+48. recibir						-to receive/greet/welcome	-DONE
+regular
 
-49. v						-							-
-n
+49. recordar					-to remember				-DONE
+o-ue stem changer
 
-50. v						-							-
-n
+50. terminar					-to finish					-DONE
+regular
 
 64. crear						-to create					-DONE
 regular
