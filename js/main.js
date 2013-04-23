@@ -187,7 +187,6 @@ irregOverrides = new Array(
 							[ 'caer',
 								[ 'Yo', 'caigo' ]
 							]
-
 );
 
 stemChangers = new Array(				//this could be improved as it shouldn't have to store the stem change with the verb. But, if structured like irregular overrides, it might need ridiculous for loops and things to access
