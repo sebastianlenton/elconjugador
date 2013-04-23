@@ -337,4 +337,5 @@ function displayOutput( output ) {
 //main!
 $( document ).ready( function() {
 	inputBtnClick();
+	$( '.verbInput input.enterVerb' ).focus();
 } );
