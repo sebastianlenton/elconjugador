@@ -128,13 +128,28 @@ regular
 42. escribir					-to write					-DONE
 regular
 
-43. perder						-to lose					-
+43. perder						-to lose					-DONE
 e-ie stem changer
 
-XX. v						-							-
+44. producir					-to produce					-DONE
+irregular yo produzco - like conocer
+
+45. ocurrir						-to occur/happen			-DONE
+regular
+
+46. v						-							-
 n
 
-XX. v						-							-
+47. v						-							-
+n
+
+48. v						-							-
+n
+
+49. v						-							-
+n
+
+50. v						-							-
 n
 
 64. crear						-to create					-DONE

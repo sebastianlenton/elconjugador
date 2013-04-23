@@ -6,8 +6,18 @@
 dictionaries, endings, etc
 ******************************/
 
+//sp/eng pronouns
+pronouns = new Array( 	[ 'Yo', 'I' ],										
+							[ 'T&uacute;', 'You' ],
+							[ '&Eacute;l', 'He' ],
+							[ 'Nosotros', 'We' ],
+							[ 'Vosotros', 'We all' ],
+							[ 'Ellos', 'They' ]
+																					//some skipped as dupes of others
+);
+
 //spanish/english regular IR infinitives
-verbInfIR = new Array( [ 'abrir', 'open' ],										//abrir is a regular verb, except for an irregular past participle, abierto
+verbInfIR = new Array( [ 'abrir', 'open' ],
 					[ 'ir', 'go' ],
 					[ 'escribir', 'write' ],
 					[ 'vivir', 'live' ],
@@ -16,11 +26,14 @@ verbInfIR = new Array( [ 'abrir', 'open' ],										//abrir is a regular verb, 
 					[ 'venir', 'come' ],
 					[ 'salir', 'leave' ],
 					[ 'sentir', 'feel' ],
-					[ 'existir', 'exist' ]
+					[ 'existir', 'exist' ],
+					[ 'producir', 'produce' ],
+					[ 'ocurrir', 'occur' ]
 );
 
 //spanish/english regular AR infinitives
 verbInfAR = new Array( [ 'crear', 'create' ],
+					[ 'estar', 'be' ],
 					[ 'cortar', 'cut' ],
 					[ 'contestar', 'answer' ],
 					[ 'dar', 'give' ],
@@ -61,16 +74,6 @@ verbInfER = new Array( [ 'ser', 'be' ],
 					[ 'volver', 'return' ],
 					[ 'conocer', 'know' ],
 					[ 'perder', 'lose' ]
-);
-
-//sp/eng pronouns
-pronouns = new Array( 	[ 'Yo', 'I' ],										
-							[ 'T&uacute;', 'You' ],
-							[ '&Eacute;l', 'He' ],
-							[ 'Nosotros', 'We' ],
-							[ 'Vosotros', 'We all' ],
-							[ 'Ellos', 'They' ]
-																					//usted, ustedes, vosotros etc?
 );
 
 //regular spanish infinitive endings - one for each group
@@ -151,6 +154,9 @@ irregOverrides = new Array(
 							],
 							[ 'conocer', 
 								[ 'Yo', 'conozco' ]
+							],
+							[ 'producir', 
+								[ 'Yo', 'produzco' ]
 							]
 
 );
@@ -206,6 +212,7 @@ Verb.prototype = {
 			default:
 				return false;
 		}
+		return this.englishInf;
 	},
 	getConjugation: function() {
 		var conjugations;
@@ -299,9 +306,12 @@ function inputBtnClick() {
 		e.preventDefault();
 		var theVerb = new Verb( getInputVerb() );
 		theVerb.getStemAndEnding();
-		theVerb.getEngInf();
-		theVerb.getConjugation();
-		displayOutput( theVerb.displayOutput() );
+		if( theVerb.getEngInf() ) {						//if there is an eng inf found
+			theVerb.getConjugation();
+			displayOutput( theVerb.displayOutput() );
+		} else {
+			displayOutput( '<p>Este verbo no est&aacute; en nuestra baso de datos.</p>' );
+		}
 	} );
 }
 
