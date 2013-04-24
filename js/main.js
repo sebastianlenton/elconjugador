@@ -8,30 +8,6 @@
 dictionaries of various things
 ******************************/
 
-//spanish/english regular IR infinitives
-verbInfIR = new Array( [ 'abrir', 'open' ],
-					[ 'ir', 'go' ],
-					[ 'escribir', 'write' ],
-					[ 'vivir', 'live' ],
-					[ 'decir', 'say' ],
-					[ 'seguir', 'follow' ],
-					[ 'venir', 'come' ],
-					[ 'salir', 'leave' ],
-					[ 'sentir', 'feel' ],
-					[ 'existir', 'exist' ],
-					[ 'producir', 'produce' ],
-					[ 'ocurrir', 'occur' ],
-					[ 'pedir', 'request' ],
-					[ 'recibir', 'receive' ],
-					[ 'permitir', 'permit' ],
-					[ 'conseguir', 'get' ],
-					[ 'servir', 'serve' ],
-					[ 'oir', 'hear' ],
-					[ 'convertir', 'convert' ],
-					[ 'partir', 'leave' ],
-					[ 'morir', 'die' ]
-);
-
 //spanish/english regular AR infinitives
 verbInfAR = new Array( [ 'crear', 'create' ],
 					[ 'estar', 'be' ],
@@ -73,11 +49,18 @@ verbInfAR = new Array( [ 'crear', 'create' ],
 					[ 'lograr', 'get' ],
 					[ 'explicar', 'explain' ],
 					[ 'preguntar', 'ask' ],
-					[ 'tocar', 'touch' ]
+					[ 'tocar', 'touch' ],
+					[ 'estudiar', 'study' ],
+					[ 'alcanzar', 'reach' ],
+					[ 'utilizar', 'use' ],
+					[ 'pagar', 'pay' ],
+					[ 'ayudar', 'help' ],
+					[ 'jugar', 'play' ]
 );																					//re - what to do with ones which are slightly ambiguous, such as contestar which means "answer/respond/reply?
 					
 //spanish/english regular ER infinitives
 verbInfER = new Array( [ 'ser', 'be' ],
+					[ 'hacer', 'do' ],
 					[ 'comer', 'eat' ],
 					[ 'beber', 'drink' ],
 					[ 'vender', 'sell' ],
@@ -100,7 +83,35 @@ verbInfER = new Array( [ 'ser', 'be' ],
 					[ 'caer', 'fall' ],
 					[ 'traer', 'bring' ],
 					[ 'suponer', 'suppose' ],
-					[ 'comprender', 'understand' ]
+					[ 'comprender', 'understand' ],
+					[ 'reconocer', 'recognise' ],
+					[ 'nacer', 'be born' ],
+					[ 'correr', 'run' ]
+);
+
+//spanish/english regular IR infinitives
+verbInfIR = new Array( [ 'abrir', 'open' ],
+					[ 'ir', 'go' ],
+					[ 'escribir', 'write' ],
+					[ 'vivir', 'live' ],
+					[ 'decir', 'say' ],
+					[ 'seguir', 'follow' ],
+					[ 'venir', 'come' ],
+					[ 'salir', 'leave' ],
+					[ 'sentir', 'feel' ],
+					[ 'existir', 'exist' ],
+					[ 'producir', 'produce' ],
+					[ 'ocurrir', 'occur' ],
+					[ 'pedir', 'request' ],
+					[ 'recibir', 'receive' ],
+					[ 'permitir', 'permit' ],
+					[ 'conseguir', 'get' ],
+					[ 'servir', 'serve' ],
+					[ 'oir', 'hear' ],
+					[ 'convertir', 'convert' ],
+					[ 'partir', 'leave' ],
+					[ 'morir', 'die' ],
+					[ 'dirigir', 'direct' ]
 );
 
 //regular spanish infinitive endings - one for each group
@@ -214,6 +225,15 @@ irregOverrides = new Array(
 							],
 							[ 'suponer',
 								[ 'Yo', 'supongo' ]
+							],
+							[ 'reconocer',
+								[ 'Yo', 'reconozco' ]
+							],
+							[ 'nacer',
+								[ 'Yo', 'nazco' ]
+							],
+							[ 'dirigir',
+								[ 'Yo', 'dirijo' ]
 							]
 );
 
@@ -238,9 +258,14 @@ stemChangers = new Array(				//this could be improved as it shouldn't have to st
 	[ 'pensar', 'e-ie' ],
 	[ 'entender', 'e-ie' ],
 	[ 'mantener', 'e-ie' ],
-	[ 'convertir', 'e-ie' ]
+	[ 'convertir', 'e-ie' ],
+	
+	
+	[ 'jugar', 'u-ue' ]
 	
 );
+
+//el codigo
 
 //verb object
 function Verb( spanishInf ) {
@@ -315,6 +340,8 @@ Verb.prototype = {
 					stem = stem.replace( 'e', 'i' );
 				} else if( this.stemChangeType == 'o-ue' ) {
 					stem = stem.replace( 'o', 'ue' );
+				} else if( this.stemChangeType == 'u-ue' ) {
+					stem = stem.replace( 'u', 'ue' );
 				}
 			}
 		}
@@ -357,7 +384,6 @@ Verb.prototype = {
 }
 
 //helpers for operation, front end, etc
-//this section really sucks
 function searchDictByKey( dict, key ) {
 	for(  i = 0; i < dict.length; i++ ) {
 		if( key == dict[ i ][ 0 ] ) {

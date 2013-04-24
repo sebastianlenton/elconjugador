@@ -101,7 +101,7 @@ e-ie stem changer
 33. tratar						-to treat/handle			-DONE
 regular
 
-34. mirar						-to watch/see				-DONE
+	34. mirar						-to watch/see				-DONE
 regular
 
 35. contar						-to count					-DONE
@@ -246,10 +246,41 @@ regular
 81. preguntar					-to ask						-HECHO
 regular
 
-82. tocar						-to touch (or play an instrument)		-
+82. tocar						-to touch (or play an instrument)		-HECHO
 regular
 
+83. reconocer					-to recognise				-HECHO
+irregular yo reconozco
 
+84. estudiar					-to study					-HECHO
+regular
+
+85. alcanzar					-to reach					-HECHO
+regular
+
+86. nacer						-to be born					-HECHO
+irregular yo nazco
+
+87. dirigir						-to direct					-HECHO
+irregular yo dirijo
+
+88. correr						-to run						-HECHO
+regular
+
+89. utilizar					-to use						-HECHO
+regular
+
+90. pagar						-to pay						-HECHO
+regular
+
+91. ayudar						-to help					-HECHO
+regular
+
+92. gustar						-to like					-IMPORTANTE PROBLEMA
+this verb is not used like other verbs, so is currently incompatible
+
+93. jugar						-to play					-HECHO
+u-ue stem changer!
 
 --------
 
@@ -267,7 +298,7 @@ regular
 ??? beber 						-to drink					-DONE
 regular
 
-??? vender 						-to drink					-DONE
+??? vender 						-to sell					-DONE
 regular
 
 
