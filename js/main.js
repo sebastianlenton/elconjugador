@@ -2,7 +2,7 @@
 //Sebastian Lenton, 21/04/2013
 //v0.2
 
-//BIG PROBLEM: DOESN'T HANDLE ACCENTED 
+//BIG PROBLEM: DOESN'T HANDLE ACCENTED  INPUT
 
 /******************************
 dictionaries of various things
