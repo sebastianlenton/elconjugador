@@ -2,6 +2,8 @@
 //Sebastian Lenton, 21/04/2013
 //v0.2
 
+//BIG PROBLEM: DOESN'T HANDLE ACCENTED 
+
 /******************************
 dictionaries of various things
 ******************************/
@@ -23,7 +25,11 @@ verbInfIR = new Array( [ 'abrir', 'open' ],
 					[ 'recibir', 'receive' ],
 					[ 'permitir', 'permit' ],
 					[ 'conseguir', 'get' ],
-					[ 'servir', 'serve' ]
+					[ 'servir', 'serve' ],
+					[ 'oir', 'hear' ],
+					[ 'convertir', 'convert' ],
+					[ 'partir', 'leave' ],
+					[ 'morir', 'die' ]
 );
 
 //spanish/english regular AR infinitives
@@ -57,7 +63,17 @@ verbInfAR = new Array( [ 'crear', 'create' ],
 					[ 'necesitar', 'need' ],
 					[ 'resultar', 'turn out' ],
 					[ 'cambiar', 'change' ],
-					[ 'presentar', 'present' ]
+					[ 'presentar', 'present' ],
+					[ 'considerar', 'consider' ],
+					[ 'acabar', 'finish' ],
+					[ 'ganar', 'gain' ],
+					[ 'formar', 'form' ],
+					[ 'aceptar', 'accept' ],
+					[ 'realizar', 'achieve' ],
+					[ 'lograr', 'get' ],
+					[ 'explicar', 'explain' ],
+					[ 'preguntar', 'ask' ],
+					[ 'tocar', 'touch' ]
 );																					//re - what to do with ones which are slightly ambiguous, such as contestar which means "answer/respond/reply?
 					
 //spanish/english regular ER infinitives
@@ -81,7 +97,10 @@ verbInfER = new Array( [ 'ser', 'be' ],
 					[ 'aparecer', 'appear' ],
 					[ 'mantener', 'maintain' ],
 					[ 'leer', 'read' ],
-					[ 'caer', 'fall' ]
+					[ 'caer', 'fall' ],
+					[ 'traer', 'bring' ],
+					[ 'suponer', 'suppose' ],
+					[ 'comprender', 'understand' ]
 );
 
 //regular spanish infinitive endings - one for each group
@@ -186,6 +205,15 @@ irregOverrides = new Array(
 							],
 							[ 'caer',
 								[ 'Yo', 'caigo' ]
+							],
+							[ 'oir',
+								[ 'Yo', 'oigo' ], [ 'T&uacute;', 'oyes' ], [ '&Eacute;l', 'oye' ], [ 'Ellos', 'oyen' ]
+							],
+							[ 'traer',
+								[ 'Yo', 'traigo' ]
+							],
+							[ 'suponer',
+								[ 'Yo', 'supongo' ]
 							]
 );
 
@@ -200,6 +228,7 @@ stemChangers = new Array(				//this could be improved as it shouldn't have to st
 	[ 'volver', 'o-ue' ],
 	[ 'contar', 'o-ue' ],
 	[ 'recordar', 'o-ue' ],
+	[ 'morir', 'o-ue' ],
 	[ 'sentir', 'e-ie' ],
 	[ 'comenzar', 'e-ie' ],
 	[ 'empezar', 'e-ie' ],
@@ -208,7 +237,8 @@ stemChangers = new Array(				//this could be improved as it shouldn't have to st
 	[ 'venir', 'e-ie' ],
 	[ 'pensar', 'e-ie' ],
 	[ 'entender', 'e-ie' ],
-	[ 'mantener', 'e-ie' ]
+	[ 'mantener', 'e-ie' ],
+	[ 'convertir', 'e-ie' ]
 	
 );
 
@@ -236,7 +266,7 @@ Verb.prototype = {
 	},
 	getEngInf: function() {
 		switch( this.ending ) {
-			case "ir":
+			case "ir" :
 				this.englishInf = searchDictByKey( verbInfIR, this.spanishInf );
 			break;
 			case "er":

@@ -197,6 +197,61 @@ regular
 65. abrir						-to open					-DONE
 regular
 
+66. considerar					-to consider				-DONE
+regular
+
+67. oír							-to hear					-NEEDS WORK
+big problem with this one as system is not built to accept input accented characters.
+mostly irregular.
+
+68. acabar						-to finish					-DONE
+regular
+
+69. convertir					-to convert					-DONE
+cambio radical e-ie
+
+70. ganar						-to gain					-DONE
+regular
+
+71. formar						-to form 					-DONE
+regular
+
+72. traer						-to bring					-DONE
+irregular yo traigo
+
+73. partir						-to leave					-DONE
+regular
+
+74. morir						-to die						-
+o-ue stem changer
+
+75. aceptar						-to accept 					-DONE
+regular
+
+76. realizar					-to achieve					-HECHO
+regular
+
+77. suponer						-to suppose					-HECHO
+irregular yo supongo
+
+78. comprender					-to understand				-HECHO
+regular
+
+79. lograr						-to get						-HECHO
+regular
+
+80. explicar					-to explain					-HECHO
+regular
+
+81. preguntar					-to ask						-HECHO
+regular
+
+82. tocar						-to touch (or play an instrument)		-
+regular
+
+
+
+--------
 
 
 
