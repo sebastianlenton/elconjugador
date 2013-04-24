@@ -55,7 +55,11 @@ verbInfAR = new Array( [ 'crear', 'create' ],
 					[ 'utilizar', 'use' ],
 					[ 'pagar', 'pay' ],
 					[ 'ayudar', 'help' ],
-					[ 'jugar', 'play' ]
+					[ 'jugar', 'play' ],
+					[ 'escuchar', 'listen' ],
+					[ 'levantar', 'lift' ],
+					[ 'intentar', 'try' ],
+					[ 'usar', 'use' ]
 );																					//re - what to do with ones which are slightly ambiguous, such as contestar which means "answer/respond/reply?
 					
 //spanish/english regular ER infinitives
@@ -86,7 +90,8 @@ verbInfER = new Array( [ 'ser', 'be' ],
 					[ 'comprender', 'understand' ],
 					[ 'reconocer', 'recognise' ],
 					[ 'nacer', 'be born' ],
-					[ 'correr', 'run' ]
+					[ 'correr', 'run' ],
+					[ 'ofrecer', 'offer' ]
 );
 
 //spanish/english regular IR infinitives
@@ -111,7 +116,9 @@ verbInfIR = new Array( [ 'abrir', 'open' ],
 					[ 'convertir', 'convert' ],
 					[ 'partir', 'leave' ],
 					[ 'morir', 'die' ],
-					[ 'dirigir', 'direct' ]
+					[ 'dirigir', 'direct' ],
+					[ 'cumplir', 'fulfil' ],
+					[ 'descubrir', 'discover' ]
 );
 
 //regular spanish infinitive endings - one for each group
@@ -234,6 +241,9 @@ irregOverrides = new Array(
 							],
 							[ 'dirigir',
 								[ 'Yo', 'dirijo' ]
+							],
+							[ 'ofrecer',
+								[ 'Yo', 'ofrezco' ]
 							]
 );
 

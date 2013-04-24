@@ -2,230 +2,230 @@ top 100 verb notes
 
 NB the following only apply to present indicative tense verb conjugation
 
-1. ser							- to be						-DONE
+1. ser							- to be						-HECHO
 completely irreg
 
-2. estar						- to be						-DONE
+2. estar						- to be						-HECHO
 nearly completely irreg (other than nosotros/vosotros)
 
-3. tener						- to have					-DONE
+3. tener						- to have					-HECHO
 e:ie stem changer other than yo tengo
 
-4. hacer						- to do						-DONE
+4. hacer						- to do						-HECHO
 regular aside from yo (hago)
 
-5. poder						- to be able to				-DONE
+5. poder						- to be able to				-HECHO
 o:ue stem changer
 
-6. decir						- to say					-DONE
+6. decir						- to say					-HECHO
 e:i stem changer, plus digo (yo digo)
 
-7. ir							- to go						-DONE
+7. ir							- to go						-HECHO
 irregular other than same conjugation as dar
 
-8. ver							- to see					-DONE
+8. ver							- to see					-HECHO
 regular other than veo (yo veo)
 
-9. dar							- to give					-DONE
+9. dar							- to give					-HECHO
 regular except for yo doy
 
-10. saber						- to know (info)			-DONE
+10. saber						- to know (info)			-HECHO
 regular other than sé (yo sé)
 
-11. querer						-to want/love				-DONE
+11. querer						-to want/love				-HECHO
 irregular (but could be an e-i stem changer?)
 
-12. llegar						-to arrive					-DONE
+12. llegar						-to arrive					-HECHO
 regular
 
-13. pasar						-to pass					-DONE
+13. pasar						-to pass					-HECHO
 regular
 
-deber							-to owe						-DONE
+deber							-to owe						-HECHO
 regular
 
-15. poner						-to put						-DONE
+15. poner						-to put						-HECHO
 regular aside from yo pongo
 
-16. parecer						-to seem					-DONE
+16. parecer						-to seem					-HECHO
 regular aside from yo parezco
 
-17. quedar						-to remain					-DONE
+17. quedar						-to remain					-HECHO
 regular
 
-18. creer						-to believe					-DONE
+18. creer						-to believe					-HECHO
 regular
 
-19. hablar						-to speak					-DONE
+19. hablar						-to speak					-HECHO
 regular
 
-20. llevar						-to carry/bring				-DONE
+20. llevar						-to carry/bring				-HECHO
 regular
 
-21. dejar						-to leave/abandon			-DONE
+21. dejar						-to leave/abandon			-HECHO
 regular
 
-22. seguir						-to follow					-DONE
+22. seguir						-to follow					-HECHO
 e-i stem changer, irregular yo sigo
 
-23. encontrar					-to find					-DONE
+23. encontrar					-to find					-HECHO
 o-ue stem changer
 
-24. llamar						-to call					-DONE
+24. llamar						-to call					-HECHO
 regular
 
-25. venir						-to come					-DONE
+25. venir						-to come					-HECHO
 e-ie stem changer, irregular yo vengo
 
-26. pensar						-to think					-DONE
+26. pensar						-to think					-HECHO
 e-ie stem changer
 
-27. salir						-to leave					-DONE
+27. salir						-to leave					-HECHO
 irregular - yo salgo
 
-28. volver						-to return					-DONE
+28. volver						-to return					-HECHO
 o-ue stem changer.
 
-29. tomar						-to take					-DONE
+29. tomar						-to take					-HECHO
 regular
 
-30. conocer						-to know					-DONE
+30. conocer						-to know					-HECHO
 regular other than yo conozco
 
-31. vivir						-to live					-DONE
+31. vivir						-to live					-HECHO
 regular
 
-32. sentir						-to feel					-DONE
+32. sentir						-to feel					-HECHO
 e-ie stem changer
 
-33. tratar						-to treat/handle			-DONE
+33. tratar						-to treat/handle			-HECHO
 regular
 
-	34. mirar						-to watch/see				-DONE
+34. mirar						-to watch/see				-HECHO
 regular
 
-35. contar						-to count					-DONE
+35. contar						-to count					-HECHO
 o-ue stem changer
 
-36. empezar						-to start					-DONE
+36. empezar						-to start					-HECHO
 e-ie stem changer - had to mod the code as e is the first letter!
 
-37. esperar						-to hope					-DONE
+37. esperar						-to hope					-HECHO
 regular
 
-38. buscar						-to search/look for			-DONE
+38. buscar						-to search/look for			-HECHO
 regular
 
-39. existir						-to exist					-assumed, as regular
+39. existir						-to exist					-HECHO
 regular
 
-40. entrar						-to enter, go in			-DONE
+40. entrar						-to enter, go in			-HECHO
 regular
 
-41. trabajar					-to work					-assumed
+41. trabajar					-to work					-HECHO
 regular
 
-42. escribir					-to write					-DONE
+42. escribir					-to write					-HECHO
 regular
 
-43. perder						-to lose					-DONE
+43. perder						-to lose					-HECHO
 e-ie stem changer
 
-44. producir					-to produce					-DONE
+44. producir					-to produce					-HECHO
 irregular yo produzco - like conocer
 
-45. ocurrir						-to occur/happen			-DONE
+45. ocurrir						-to occur/happen			-HECHO
 regular
 
-46. entender					-to understand				-DONE
+46. entender					-to understand				-HECHO
 e-ie stem changer
 
-47. pedir						-to ask/request				-DONE
+47. pedir						-to ask/request				-HECHO
 e-i stem changer
 
-48. recibir						-to receive/greet/welcome	-DONE
+48. recibir						-to receive/greet/welcome	-HECHO
 regular
 
-49. recordar					-to remember				-DONE
+49. recordar					-to remember				-HECHO
 o-ue stem changer
 
-50. terminar					-to finish					-DONE
+50. terminar					-to finish					-HECHO
 regular
 
-51. permitir					-to permit, allow			-DONE
+51. permitir					-to permit, allow			-HECHO
 regular
 
-52. aparecer					-to appear					-DONE
+52. aparecer					-to appear					-HECHO
 irregular yo aparezco
 
-53. conseguir					-to get						-DONE
+53. conseguir					-to get						-HECHO
 e-i stem changer. irregular yo consigo
 
-54. comenzar					-to start					-DONE
+54. comenzar					-to start					-HECHO
 e-ie stem changer
 
-55. servir						-to serve					-DONE
+55. servir						-to serve					-HECHO
 e-i stem changer
 
-56. sacar						-to take out				-DONE
+56. sacar						-to take out				-HECHO
 regular
 
-57. necesitar					-to need					-DONE
+57. necesitar					-to need					-HECHO
 regular
 
-58. mantener					-to maintain				-DONE
+58. mantener					-to maintain				-HECHO
 e-ie stem changer, irregular yo mantengo
 
-59. resultar					-to turn out				-DONE
+59. resultar					-to turn out				-HECHO
 regular
 
-60. leer						-to read					-DONE
+60. leer						-to read					-HECHO
 regular
 
-61. caer						-to fall					-DONE
+61. caer						-to fall					-HECHO
 irregular yo caigo
 
-62. cambiar						-to change					-DONE
+62. cambiar						-to change					-HECHO
 regular
 
-63. presentar					-to present					-DONE
+63. presentar					-to present					-HECHO
 regular
 
-64. crear						-to create					-DONE
+64. crear						-to create					-HECHO
 regular
 
-65. abrir						-to open					-DONE
+65. abrir						-to open					-HECHO
 regular
 
-66. considerar					-to consider				-DONE
+66. considerar					-to consider				-HECHO
 regular
 
-67. oír							-to hear					-NEEDS WORK
+67. oír							-to hear					-NECESITA TRABAJO
 big problem with this one as system is not built to accept input accented characters.
 mostly irregular.
 
-68. acabar						-to finish					-DONE
+68. acabar						-to finish					-HECHO
 regular
 
-69. convertir					-to convert					-DONE
+69. convertir					-to convert					-HECHO
 cambio radical e-ie
 
-70. ganar						-to gain					-DONE
+70. ganar						-to gain					-HECHO
 regular
 
-71. formar						-to form 					-DONE
+71. formar						-to form 					-HECHO
 regular
 
-72. traer						-to bring					-DONE
+72. traer						-to bring					-HECHO
 irregular yo traigo
 
-73. partir						-to leave					-DONE
+73. partir						-to leave					-HECHO
 regular
 
-74. morir						-to die						-
+74. morir						-to die						-HECHO
 o-ue stem changer
 
-75. aceptar						-to accept 					-DONE
+75. aceptar						-to accept 					-HECHO
 regular
 
 76. realizar					-to achieve					-HECHO
@@ -280,25 +280,46 @@ regular
 this verb is not used like other verbs, so is currently incompatible
 
 93. jugar						-to play					-HECHO
-u-ue stem changer!
+u-ue stem changer
+
+94. escuchar					-to listen					-HECHO
+regular
+
+95. cumplir						-to fulfil					-HECHO
+regular
+
+96. ofrecer						-to offer					-HECHO
+irregular yo ofrezco
+
+97. descubrir					-to discover				-HECHO
+regular
+
+98. levantar					-to lift					-HECHO
+regular
+
+99. intentar					-to try						-HECHO
+regular
+
+100. usar						-to use						-HECHO
+regular
 
 --------
 
 
 
-??? cortar						-to cut						-DONE
+??? cortar						-to cut						-HECHO
 regular
 
-?? contestar					-to answer					-DONE
+?? contestar					-to answer					-HECHO
 regular
 
-??? comer 						-to eat						-DONE
+??? comer 						-to eat						-HECHO
 regular
 
-??? beber 						-to drink					-DONE
+??? beber 						-to drink					-HECHO
 regular
 
-??? vender 						-to sell					-DONE
+??? vender 						-to sell					-HECHO
 regular
 
 
