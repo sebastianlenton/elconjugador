@@ -23,12 +23,20 @@
  - an all new, reprogrammed version of this which supports more verbs & tenses!
 
 
-*/
 
 
+To-dos (current)
+ - fix problem re wrong endings on eng equivs (eg 'he watchs' needs to be 'he watches')
+ - re the above, overrides for certain verbs (eg ser/estar/poder are all a mess right now)
+ - front end work needs doing
+
+(future)
 //BIG PROBLEM: DOESN'T HANDLE ACCENTED INPUT
 //DOESN'T SUPPORT REFLEXIVE VERBS
 //DOESN'T SUPPORT FORMAL CONJUGATION
+//I NEED A BLOODY DATABASE
+
+*/
 
 /******************************
 dictionaries of various things
@@ -406,7 +414,6 @@ Verb.prototype = {
 		return output;
 	},
 	addEngPronoun: function( index ) {					//index is whichever Spanish pronoun is being selected from pronouns dict
-		//var output = pronouns[ index ][ 1 ];
 		if( index == 2 ) {
 			return 's';
 		} else {
@@ -440,19 +447,29 @@ function searchDictByKey( dict, key ) {
 function bindInputBtnClick() {
 	$( '.verbInput' ).on( 'submit', function( e ) {
 		e.preventDefault();
-		var theVerb = new Verb( getInputVerb() );
-		theVerb.getStemAndEnding();
-		if( theVerb.getEngInf() ) {						//if there is an eng inf found
-			theVerb.getConjugation();
-			displayOutput( theVerb.displayOutput() );
+		var theVerb = getInputVerb();
+		if( theVerb ) {
+			theVerb = new Verb( theVerb );
+			theVerb.getStemAndEnding()
+			if( theVerb.getEngInf() ) {						//if there is an eng inf found
+				theVerb.getConjugation();
+				displayOutput( theVerb.displayOutput() );
+			} else {
+				displayOutput( '<p>Este verbo no est&aacute; en nuestra baso de datos.</p>' );
+			}
 		} else {
-			displayOutput( '<p>Este verbo no est&aacute; en nuestra baso de datos.</p>' );
+			displayOutput( '<p>Escriba un infinitivo del verbo, por favor.</p>' );
 		}
 	} );
 }
 
 function getInputVerb() {
-	return $( '.verbInput input' ).val();
+	var input = $( '.verbInput input' ).val().trim();			//trim off whitespace
+	$( '.verbInput input[type=text]' ).val( input );			//make input field be trimmed whitespace
+	$( '.verbInput input[type=text]' ).focus();					//focus back, for ease of use
+	if( input.length > 0 ) {
+		return input;
+	}
 }
 
 function displayOutput( output ) {
