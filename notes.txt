@@ -41,7 +41,7 @@ regular
 13. pasar						-to pass					-HECHO
 regular
 
-deber							-to owe						-HECHO
+14. deber							-to owe						-HECHO
 regular
 
 15. poner						-to put						-HECHO
@@ -164,7 +164,7 @@ e-i stem changer. irregular yo consigo
 54. comenzar					-to start					-HECHO
 e-ie stem changer
 
-55. servir						-to serve					-HECHO
+55. servir						-to serve					-HECHO					-LA TARJETA ACTUAL
 e-i stem changer
 
 56. sacar						-to take out				-HECHO

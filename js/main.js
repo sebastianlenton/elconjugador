@@ -1,8 +1,34 @@
 //El Conjugador
 //Sebastian Lenton, 21/04/2013
-//v0.2
+//v0.2.1
 
-//BIG PROBLEM: DOESN'T HANDLE ACCENTED  INPUT
+
+
+/*
+
+
+  /$$$$$$                          /$$                            /$$$$$$                                   
+ /$$__  $$                        |__/                           /$$__  $$                                  
+| $$  \__/  /$$$$$$  /$$$$$$/$$$$  /$$ /$$$$$$$   /$$$$$$       | $$  \__/  /$$$$$$   /$$$$$$  /$$$$$$$  /$$
+| $$       /$$__  $$| $$_  $$_  $$| $$| $$__  $$ /$$__  $$      |  $$$$$$  /$$__  $$ /$$__  $$| $$__  $$|__/
+| $$      | $$  \ $$| $$ \ $$ \ $$| $$| $$  \ $$| $$  \ $$       \____  $$| $$  \ $$| $$  \ $$| $$  \ $$    
+| $$    $$| $$  | $$| $$ | $$ | $$| $$| $$  | $$| $$  | $$       /$$  \ $$| $$  | $$| $$  | $$| $$  | $$ /$$
+|  $$$$$$/|  $$$$$$/| $$ | $$ | $$| $$| $$  | $$|  $$$$$$$      |  $$$$$$/|  $$$$$$/|  $$$$$$/| $$  | $$|__/
+ \______/  \______/ |__/ |__/ |__/|__/|__/  |__/ \____  $$       \______/  \______/  \______/ |__/  |__/    
+                                                 /$$  \ $$                                                  
+                                                |  $$$$$$/                                                  
+                                                 \______/                                                   
+
+
+ - an all new, reprogrammed version of this which supports more verbs & tenses!
+
+
+*/
+
+
+//BIG PROBLEM: DOESN'T HANDLE ACCENTED INPUT
+//DOESN'T SUPPORT REFLEXIVE VERBS
+//DOESN'T SUPPORT FORMAL CONJUGATION
 
 /******************************
 dictionaries of various things
@@ -153,7 +179,7 @@ infEndingsER = new Array( 	[ 'Yo', 'o' ],
 //sp/eng pronouns
 pronouns = new Array( 	[ 'Yo', 'I' ],										
 							[ 'T&uacute;', 'You' ],
-							[ '&Eacute;l', 'He' ],
+							[ '&Eacute;l', 'He/she' ],
 							[ 'Nosotros', 'We' ],
 							[ 'Vosotros', 'We all' ],
 							[ 'Ellos', 'They' ]																					//some skipped as dupes of others
@@ -335,7 +361,7 @@ Verb.prototype = {
 		this.conjugations = conjugations;
 	},
 	stemChange: function( stem, pronoun ) {							//I think I could avoid doing this so many times
-		if( pronoun != 'Nosotros' && pronoun != 'Vosotros' ) {		//when Vosotros is actually introduced, this might fail. Untested.
+		if( pronoun != 'Nosotros' && pronoun != 'Vosotros' ) {
 			if( this.stemChangeType ) {
 				if( this.stemChangeType == 'e-ie' ) {
 					if( stem.indexOf( 'e' ) != 0 ) {
@@ -379,13 +405,21 @@ Verb.prototype = {
 		}
 		return output;
 	},
+	addEngPronoun: function( index ) {					//index is whichever Spanish pronoun is being selected from pronouns dict
+		//var output = pronouns[ index ][ 1 ];
+		if( index == 2 ) {
+			return 's';
+		} else {
+			return '';
+		}
+	},
 	displayOutput: function() {
 		var outputStr = '';
 		if( this.conjugations.length > 0 ) {
 			outputStr = '<h2>' + this.spanishInf + ' - to ' + this.englishInf + '</h2>';
 			for( i = 0; i < this.conjugations.length; i++ ) {
-				
-				outputStr += '<li>' + pronouns[i][0] + ' ' + this.conjugations[i] + '</li>';
+				console.log( i );
+				outputStr += '<li>' + pronouns[i][0] + ' ' + this.conjugations[i] + ' - ' + pronouns[i][1] + ' ' + this.englishInf + this.addEngPronoun( i ) + '</li>';
 			}
 			return '<ul>' + outputStr + '</ul>';
 		}
@@ -403,7 +437,7 @@ function searchDictByKey( dict, key ) {
 	return false;
 }
 
-function inputBtnClick() {
+function bindInputBtnClick() {
 	$( '.verbInput' ).on( 'submit', function( e ) {
 		e.preventDefault();
 		var theVerb = new Verb( getInputVerb() );
@@ -427,6 +461,6 @@ function displayOutput( output ) {
 
 //main!
 $( document ).ready( function() {
-	inputBtnClick();
+	bindInputBtnClick();
 	$( '.verbInput input.enterVerb' ).focus();
 } );
