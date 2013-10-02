@@ -1,6 +1,6 @@
 //El Conjugador
-//Sebastian Lenton, 21/04/2013
-//v0.2.1
+//Sebastian Lenton 2013
+//v0.2.2
 
 
 
@@ -26,8 +26,6 @@
 
 
 To-dos (current)
- - fix problem re wrong endings on eng equivs (eg 'he watchs' needs to be 'he watches')
- - re the above, overrides for certain verbs (eg ser/estar/poder are all a mess right now)
  - front end work needs doing
 
 (future)
@@ -43,6 +41,7 @@ dictionaries of various things
 ******************************/
 
 //spanish/english regular AR infinitives
+//this list is ALL DONE re correct Eng endings
 verbInfAR = new Array( [ 'crear', 'create' ],
 					[ 'estar', 'be' ],
 					[ 'cortar', 'cut' ],
@@ -97,13 +96,14 @@ verbInfAR = new Array( [ 'crear', 'create' ],
 );																					//re - what to do with ones which are slightly ambiguous, such as contestar which means "answer/respond/reply?
 					
 //spanish/english regular ER infinitives
+//this list is ALL DONE re correct Eng endings
 verbInfER = new Array( [ 'ser', 'be' ],
 					[ 'hacer', 'do' ],
 					[ 'comer', 'eat' ],
 					[ 'beber', 'drink' ],
 					[ 'vender', 'sell' ],
 					[ 'tener', 'have' ],
-					[ 'poder', 'can' ],
+					[ 'poder', 'be able' ],
 					[ 'ver', 'see' ],
 					[ 'saber', ' know'],
 					[ 'querer', 'want'],
@@ -189,7 +189,7 @@ pronouns = new Array( 	[ 'Yo', 'I' ],
 							[ 'T&uacute;', 'You' ],
 							[ '&Eacute;l', 'He/she' ],
 							[ 'Nosotros', 'We' ],
-							[ 'Vosotros', 'We all' ],
+							[ 'Vosotros', 'You all' ],
 							[ 'Ellos', 'They' ]																					//some skipped as dupes of others
 );
 
@@ -303,10 +303,58 @@ stemChangers = new Array(				//this could be improved as it shouldn't have to st
 	[ 'entender', 'e-ie' ],
 	[ 'mantener', 'e-ie' ],
 	[ 'convertir', 'e-ie' ],
-	
-	
 	[ 'jugar', 'u-ue' ]
-	
+);
+
+engEndOverrides = new Array(													//this needs finishing and implementing!
+	[ 'pass',
+		[ 'He/she', 'passes' ]
+	],
+	[ 'search',
+		[ 'He/she', 'searches' ]
+	],
+	[ 'finish',
+		[ 'He/she', 'finishes' ]
+	],
+	[ 'take out',
+		[ 'He/she', 'takes out' ]
+	],
+	[ 'turn out',
+		[ 'He/she', 'turns out' ]
+	],
+	[ 'watch',
+		[ 'He/she', 'watches' ]
+	],
+	[ 'touch',
+		[ 'He/she', 'touches' ]
+	],
+	[ 'study',
+		[ 'He/she', 'studies' ]
+	],
+	[ 'reach',
+		[ 'He/she', 'reaches' ]
+	],
+	[ 'try',
+		[ 'He/she', 'tries' ]
+	],
+	[ 'do',
+		[ 'He/she', 'does' ]
+	],
+	[ 'have',
+		[ 'He/she', 'has' ]
+	],
+	[ 'be',
+		[ 'I', 'am' ], [ 'You', 'are' ],[ 'He/she', 'is' ],[ 'We', 'are' ],[ 'You all', 'are' ],[ 'They', 'are' ]
+	],
+	[ 'be able',
+		[ 'I', 'can' ], [ 'You', 'can' ],[ 'He/she', 'can' ],[ 'We', 'can' ],[ 'You all', 'can' ],[ 'They', 'can' ]
+	],
+	[ 'be born',
+		[ 'I', 'am born' ], [ 'You', 'are born' ],[ 'He/she', 'is born' ],[ 'We', 'are born' ],[ 'You all', 'are born' ],[ 'They', 'are born' ]
+	],
+	[ 'go',
+		[ 'He/she', 'goes' ]
+	]
 );
 
 //el codigo
@@ -327,7 +375,7 @@ Verb.prototype = {
 		this.ending = this.spanishInf.substring( this.spanishInf.length - 2 );
 		this.stem = this.spanishInf.substring( 0, this.spanishInf.length - 2 );
 		
-		for( q = 0; q < stemChangers.length; q++ ) {	//check if on stem changers list
+		for( var q = 0; q < stemChangers.length; q++ ) {	//check if on stem changers list
 			if( this.spanishInf == stemChangers[ q ][ 0 ] ) {
 				this.stemChangeType = stemChangers[ q ][ 1 ];
 			}
@@ -392,10 +440,10 @@ Verb.prototype = {
 		return stem;
 	},
 	getIrregOverrides: function( conjugations ) {
-		for( i = 0; i < irregOverrides.length; i++ ) {
+		for( var i = 0; i < irregOverrides.length; i++ ) {
 			if( this.spanishInf == irregOverrides[ i ][ 0 ] ) {
-				for( k = 1; k < irregOverrides[ i ].length; k++ ) {
-					for( j = 0; j < pronouns.length; j++ ) {
+				for( var k = 1; k < irregOverrides[ i ].length; k++ ) {
+					for( var j = 0; j < pronouns.length; j++ ) {
 						if( pronouns[ j ][ 0 ] == irregOverrides[ i ][ k ][ 0 ] ) {
 							conjugations[ j ] = irregOverrides[ i ][ k ][ 1 ];
 						}
@@ -408,25 +456,41 @@ Verb.prototype = {
 	},
 	conjugateStandard: function( rules ) {
 		var output = [];
-		for( i = 0; i < rules.length; i++ ) {
+		for( var i = 0; i < rules.length; i++ ) {
 			output.push( this.stemChange( this.stem, rules[ i ][ 0 ] ) + rules[ i ][ 1 ] );
 		}
 		return output;
 	},
-	addEngPronoun: function( index ) {					//index is whichever Spanish pronoun is being selected from pronouns dict
-		if( index == 2 ) {
-			return 's';
+	addEngEnding: function( engPronoun, engInf ) {
+		var ending = this.getIrregEnding( engPronoun, engInf );
+		if( ending ) {
+			return ending;			
 		} else {
-			return '';
+			if( engPronoun == 'He/she' ) {
+				return engInf + 's';
+			} else {
+				return engInf;
+			}	
+		}
+	},
+	getIrregEnding: function( engPronoun, engInf ) {
+		for( var x = 0; x < engEndOverrides.length; x++  ) {
+			if( engInf == engEndOverrides[ x ][ 0 ] ) {
+				for( var t = 1; t < engEndOverrides[ x ].length; t++  ) {
+					if( engEndOverrides[x][t][0] == engPronoun ) {
+						return engEndOverrides[x][t][1];
+						break;
+					}
+				}
+			}
 		}
 	},
 	displayOutput: function() {
 		var outputStr = '';
 		if( this.conjugations.length > 0 ) {
 			outputStr = '<h2>' + this.spanishInf + ' - to ' + this.englishInf + '</h2>';
-			for( i = 0; i < this.conjugations.length; i++ ) {
-				console.log( i );
-				outputStr += '<li>' + pronouns[i][0] + ' ' + this.conjugations[i] + ' - ' + pronouns[i][1] + ' ' + this.englishInf + this.addEngPronoun( i ) + '</li>';
+			for( var i = 0; i < this.conjugations.length; i++ ) {
+				outputStr += '<li>' + pronouns[i][0] + ' ' + this.conjugations[i] + ' - ' + pronouns[i][1] + ' ' + this.addEngEnding( pronouns[i][1], this.englishInf ) + '</li>';
 			}
 			return '<ul>' + outputStr + '</ul>';
 		}
@@ -436,7 +500,7 @@ Verb.prototype = {
 
 //helpers for operation, front end, etc
 function searchDictByKey( dict, key ) {
-	for(  i = 0; i < dict.length; i++ ) {
+	for( var i = 0; i < dict.length; i++ ) {
 		if( key == dict[ i ][ 0 ] ) {
  			return dict[ i ][ 1 ];
 		}
